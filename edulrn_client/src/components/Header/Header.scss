@@ -1,0 +1,19 @@
+.header {
+  .navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: red;
+    &__right--links {
+      display: flex;
+      list-style-type: none;
+    }
+    &__right--login {
+      padding: 1rem;
+    }
+    &__right--register {
+      padding: 1rem;
+    }
+  }
+}
