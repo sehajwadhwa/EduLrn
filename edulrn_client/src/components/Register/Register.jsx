@@ -6,7 +6,7 @@ const Register = () => {
     <div className="Login__main">
       <form>
         <label htmlFor="firstName">First Name </label>
-        <Input
+        <input
           type="text"
           placeholder="Type your First Name"
           name="firstName"
@@ -15,7 +15,7 @@ const Register = () => {
         />
 
         <label htmlFor="lastName">Last Name</label>
-        <Input
+        <input
           type="text"
           placeholder="Type your Last Name"
           name="lastName"
@@ -23,7 +23,7 @@ const Register = () => {
         />
 
         <label htmlFor="email">Email Address : </label>
-        <Input
+        <input
           type="email"
           placeholder="Enter your email address"
           name="email"
@@ -31,7 +31,7 @@ const Register = () => {
           required
         />
         <label htmlFor="password">Password</label>
-        <Input
+        <input
           type="password"
           name="password"
           placeholder="enter your password"
@@ -40,7 +40,14 @@ const Register = () => {
         />
 
         <label htmlFor="areaOfInterest">Area of Interest </label>
-        <Input type="text" placeholder="" name="areaOfInterest" value="" />
+        {/* add onChange to line 44 */}
+        <select name="area_interest" value="">
+          <option value="">Option 1 </option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+        </select>
 
         <input type="submit" value="Register" />
       </form>
