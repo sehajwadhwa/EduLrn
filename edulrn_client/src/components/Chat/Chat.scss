@@ -1,0 +1,39 @@
+.Chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChatApp {
+  height: 50vh;
+  max-width: 40vh;
+  width: 100%;
+
+  box-shadow: 0px 0px 10px 5px grey;
+  border-radius: 10px;
+
+  &__header {
+    background-color: yellow;
+    padding: 2px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &__header > h1 {
+    color: maroon;
+  }
+  &__content{
+    border: 1px solid red;
+    
+    height: calc(100% - 5vh);
+  }
+  &__form {
+    height: 5vh;
+    padding: 20px;
+      
+    border: 1px dotted black;
+  }
+}

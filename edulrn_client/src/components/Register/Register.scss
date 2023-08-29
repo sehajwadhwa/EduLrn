@@ -1,0 +1,14 @@
+.Register {
+  display: flex;
+  flex-direction: column;
+
+  &__header{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+  &__main{
+    display: flex;
+    flex-direction: column;
+  }
+}
