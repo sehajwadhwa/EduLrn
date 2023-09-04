@@ -1,0 +1,19 @@
+.footer {
+  background-color: #f2f5f3;
+  color: #842d2f;
+  padding: 20px 0;
+
+  display: flex;
+  &__container {
+    &--elements {
+      height: 30vh;
+      width: 100%;
+    }
+    &--e1 {
+      height: 100%;
+      display: flex;
+      
+      justify-content: space-between;
+    }
+  }
+}

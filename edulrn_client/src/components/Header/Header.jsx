@@ -15,10 +15,10 @@ const Header = () => {
         <div className="navbar__right">
           <ul className="navbar__right--links">
             <Link to="/login">
-              <li className="navbar__right--login">LogIn</li>
+              <li className="navbar__right--login">LOG IN</li>
             </Link>
             <Link to="/register">
-              <li className="navbar__right--register">Register</li>
+              <li className="navbar__right--register">REGISTER</li>
             </Link>
           </ul>
         </div>

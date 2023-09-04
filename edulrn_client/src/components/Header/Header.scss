@@ -12,9 +12,11 @@
     }
     &__right--login {
       padding: 1rem;
+      font-size: 1rem;
     }
     &__right--register {
       padding: 1rem;
+      font-size: 1rem;
     }
     img {
       height: 100%;
@@ -23,8 +25,8 @@
 }
 a {
   text-decoration: none;
-  color: navy;
-  font-weight: 600;
+  color: #9d7b8d;
+  font-weight: 700;
 }
 a:hover {
   color: maroon;

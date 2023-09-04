@@ -1,21 +1,41 @@
+a {
+  text-decoration: none;
+  color: maroon;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+a:hover {
+  color: #9d7b8d;
+}
+
 .Login {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  width: 60vw;
+  margin: 5rem;
+  background-color: #db9559;
+  color: white;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 
   &__header {
     display: flex;
     justify-content: center;
     margin: 2rem;
+    font-size: 2rem;
   }
   &__main {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    margin: 1rem;
+    font-size: 0.8rem;
   }
 
   &__main input {
-    padding: 0.5rem 1rem;
+    // padding: 0.5rem 1rem; //remove for mobile styling
     margin: 0.5rem 0.3rem;
   }
 }

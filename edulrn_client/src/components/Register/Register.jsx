@@ -4,8 +4,8 @@ import "./Register.scss";
 const Register = () => {
   return (
     <section className="Register">
-      <div className="Register__header">Register</div>
-      <div >
+      <div className="Register__header">REGISTER</div>
+      <div>
         <form className="Register__main">
           <label htmlFor="firstName">First Name </label>
           <input
@@ -51,7 +51,7 @@ const Register = () => {
             <option value="">Option 5</option>
           </select>
 
-          <input type="submit" value="Register" />
+          <input type="submit" value="REGISTER" />
         </form>
       </div>
     </section>

@@ -4,7 +4,7 @@ import "./Login.scss";
 const Login = () => {
   return (
     <section className="Login">
-      <div className="Login__header">LogIn</div>
+      <div className="Login__header">LOG IN </div>
       <div>
         <form className="Login__main">
           <label htmlFor="username">
@@ -12,7 +12,7 @@ const Login = () => {
             <input
               type="text"
               name="username"
-              placeholder="enter your username"
+              placeholder="Enter your username"
               value=""
               required
             />
@@ -23,7 +23,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="enter your password"
+              placeholder="Enter your password"
               value=""
               required
             />
