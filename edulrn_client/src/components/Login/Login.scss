@@ -32,10 +32,23 @@ a:hover {
     align-items: center;
     margin: 1rem;
     font-size: 0.8rem;
+    &--fields {
+      padding: 1rem 0.5rem;
+    }
   }
 
   &__main input {
     // padding: 0.5rem 1rem; //remove for mobile styling
     margin: 0.5rem 0.3rem;
+  }
+  &__button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: aquamarine;
+
+    &:hover {
+      background-color: #9d7b8d;
+    }
   }
 }

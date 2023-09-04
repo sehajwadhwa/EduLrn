@@ -17,29 +17,35 @@ img {
     transform: translateX(0%);
   }
   100% {
-    transform: translate(calc(-100vw * 3));
+    transform: translate(calc(-80vw * 3));
   }
 }
 
 .courses {
   background-color: beige;
-  width: 70vw;
+  width: 100vw;
   height: 60vh;
   position: relative;
   display: flex;
 
   &__img {
-    animation: scroll 10s linear infinite;
+    animation: scroll 12s linear infinite;
     display: flex;
-    width: calc(100vw * 6);
+    width: calc(9vw * 6);
+    &--1 {
+      width: 100vw;
+      height: 60vh;
+    }
     &--slide {
       height: 100vh;
       width: 100vw;
     }
-    &__content {
-      background-color: black;
-      width: 20vw;
-      height: 20vh;
-    }
+  }
+  &__content {
+    background-color: black;
+    border: 2px solid red;
+    width: 100vw;
+    height: 60vh;
+    z-index: 1;
   }
 }

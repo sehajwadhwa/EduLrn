@@ -10,10 +10,11 @@ const Login = () => {
           <label htmlFor="username">
             Username :
             <input
+              className="Login__main--fields"
               type="text"
               name="username"
               placeholder="Enter your username"
-              value=""
+              // value=""
               required
             />
           </label>
@@ -21,14 +22,15 @@ const Login = () => {
           <label htmlFor="password">
             Password :
             <input
+              className="Login__main--fields"
               type="password"
               name="password"
               placeholder="Enter your password"
-              value=""
+              // value=""
               required
             />
           </label>
-          <input type="submit" value="LogIn" />
+          <input className="Login__button" type="submit" value="LogIn" />
           <a href="/register">New User ? Click here to Register</a>
         </form>
       </div>
