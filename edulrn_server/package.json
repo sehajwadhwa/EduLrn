@@ -1,0 +1,31 @@
+{
+  "name": "edulrn_server",
+  "version": "1.0.0",
+  "description": "edulrn backend server",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sehajwadhwa/EduLrn.git"
+  },
+  "author": "Sehaj Wadhwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sehajwadhwa/EduLrn/issues"
+  },
+  "homepage": "https://github.com/sehajwadhwa/EduLrn#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
