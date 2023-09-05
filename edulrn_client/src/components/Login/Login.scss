@@ -5,14 +5,16 @@ a {
   font-weight: 700;
 }
 a:hover {
-  color: #9d7b8d;
+  color: #262D27;
 }
+
+//Mobile Friendly at 320 px 
 
 .Login {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70vh;
+  height: 75vh;
   width: 60vw;
   margin: 5rem;
   background-color: #db9559;
@@ -32,8 +34,12 @@ a:hover {
     align-items: center;
     margin: 1rem;
     font-size: 0.8rem;
+
+    &--heading {
+      padding: 0 1rem;
+    }
     &--fields {
-      padding: 1rem 0.5rem;
+      padding: 0.7rem 0rem;
     }
   }
 
@@ -45,10 +51,13 @@ a:hover {
     padding: 0.8rem 1.5rem;
     border-radius: 20px;
     border: none;
-    background-color: aquamarine;
+    background-color:#F1F1F1;
+    font-weight: 700;
 
     &:hover {
-      background-color: #9d7b8d;
+      background-color: #3F575F;
+      color: #F1F1F1;
+      font-weight: 700;
     }
   }
 }

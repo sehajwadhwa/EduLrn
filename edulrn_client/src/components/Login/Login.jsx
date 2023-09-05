@@ -7,8 +7,8 @@ const Login = () => {
       <div className="Login__header">LOG IN </div>
       <div>
         <form className="Login__main">
-          <label htmlFor="username">
-            Username :
+          <label className="Login__main--heading" htmlFor="username">
+            USERNAME :
             <input
               className="Login__main--fields"
               type="text"
@@ -19,8 +19,8 @@ const Login = () => {
             />
           </label>
 
-          <label htmlFor="password">
-            Password :
+          <label className="Login__main--heading" htmlFor="password">
+            PASSWORD :
             <input
               className="Login__main--fields"
               type="password"
