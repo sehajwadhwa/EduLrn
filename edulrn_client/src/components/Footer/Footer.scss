@@ -1,7 +1,6 @@
 .footer {
-  background-color: #f2f5f3;
   color: #842d2f;
-  padding: 20px 0;
+  // padding: 20px 0;
 
   display: flex;
   &__container {
@@ -12,7 +11,7 @@
     &--e1 {
       height: 100%;
       display: flex;
-      
+
       justify-content: space-between;
     }
   }

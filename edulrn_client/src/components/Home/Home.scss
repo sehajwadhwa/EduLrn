@@ -1,4 +1,4 @@
-.banner {
+.hero {
   height: 90vh;
   width: 100%;
 }
@@ -22,19 +22,20 @@ img {
 }
 
 .courses {
-  background-color: beige;
+  margin-top: 2rem;
+  background-color: #8D8473;
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
   position: relative;
   display: flex;
 
   &__img {
-    animation: scroll 12s linear infinite;
+    animation: scroll 25s linear infinite;
     display: flex;
     width: calc(9vw * 6);
     &--1 {
       width: 100vw;
-      height: 60vh;
+      height: 50vh;
     }
     &--slide {
       height: 100vh;
@@ -42,10 +43,12 @@ img {
     }
   }
   &__content {
-    background-color: black;
-    border: 2px solid red;
+    background-color: white;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     z-index: 1;
+    font-style: italic;
+    font-size: 0.8rem;            //mobile friendly
+    
   }
 }

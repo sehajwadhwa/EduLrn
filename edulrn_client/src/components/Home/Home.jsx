@@ -1,6 +1,11 @@
 import React from "react";
-import banner1 from "../../assets/banner1.jpg";
-import courses1 from "../../assets/COURSES1.jpg";
+import banner1 from "../../assets/Banner/b1.jpg";
+import banner2 from "../../assets/Banner/b2.jpg";
+import banner3 from "../../assets/Banner/b3.jpg";
+import courses1 from "../../assets/Courses/c1.jpg";
+import courses2 from "../../assets/Courses/c2.jpg";
+import courses3 from "../../assets/Courses/c3.jpg";
+
 import "./Home.scss";
 import barba from "@barba/core";
 import { Link } from "react-router-dom";
@@ -8,8 +13,21 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="Home">
-      <div className="banner">
-        <img src={banner1} alt="Banner"></img>
+      <div className="hero">
+        {/* slider */}
+
+        <div className="banner">
+          <div className="banner--slide">
+            <img className="banner__img--1" src={banner1} alt="Banner" />
+          </div>
+          <div className="banner--slide">
+            <img className="banner__img--2" src={banner2} alt="Banner" />
+          </div>
+          <div className="banner--slide">
+            <img className="banner__img--3" src={banner3} alt="Banner" />
+          </div>
+        </div>
+
       </div>
       <div className="courses">
         <Link to="/courses">
@@ -23,19 +41,26 @@ const Home = () => {
           </div>
           <div className="courses__img--slide">
             {" "}
+            <img className="courses__img--1" src={courses2} alt="Courses" />
+          </div>
+          <div className="courses__img--slide">
+            <img className="courses__img--1" src={courses3} alt="Courses" />
+          </div>
+          <div className="courses__img--slide">
             <img className="courses__img--1" src={courses1} alt="Courses" />
           </div>
-          <div className="courses__img--slide">img3</div>
-          <div className="courses__img--slide">img 1</div>
-          <div className="courses__img--slide">img2</div>
-          <div className="courses__img--slide">img3</div>
+          <div className="courses__img--slide">
+            <img className="courses__img--1" src={courses2} alt="Courses" />
+          </div>
+          <div className="courses__img--slide">
+            <img className="courses__img--1" src={courses3} alt="Courses" />
+          </div>
         </div>
         <div className="courses__content">
+          <p>Unlock Your Potential through Online Learning. </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo esse,
-            commodi quaerat natus nam fuga quis rem tempore? Quas doloribus
-            soluta molestias possimus consequatur ab rerum iusto illo officia
-            error?
+            EduLrn is your gateway to a world of online education that's
+            flexible, engaging, and tailored to your needs.
           </p>
         </div>
       </div>
