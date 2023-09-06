@@ -27,13 +27,8 @@ const Home = () => {
             <img className="banner__img--3" src={banner3} alt="Banner" />
           </div>
         </div>
-
       </div>
       <div className="courses">
-        <Link to="/courses">
-          {" "}
-          <p>Courses</p>{" "}
-        </Link>
         <div className="courses__img">
           {/* slider */}
           <div className="courses__img--slide">
@@ -62,6 +57,9 @@ const Home = () => {
             EduLrn is your gateway to a world of online education that's
             flexible, engaging, and tailored to your needs.
           </p>
+          <Link to="/courses">
+            <button>Courses</button>
+          </Link>
         </div>
       </div>
     </section>

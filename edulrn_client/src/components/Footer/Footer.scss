@@ -1,12 +1,12 @@
 .footer {
   color: #842d2f;
   // padding: 20px 0;
-
+  position: absolute;
+  top: 80%;
   display: flex;
   &__container {
     &--elements {
       height: 30vh;
-      width: 100%;
     }
     &--e1 {
       height: 100%;

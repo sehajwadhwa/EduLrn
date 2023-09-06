@@ -3,7 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo2.jpg";
 
-const Header = () => {
+const Header = (props) => {
+  function handleLogout() {
+    console.log("Log Out");
+  }
   return (
     <header className="header">
       <nav className="navbar">
@@ -17,9 +20,29 @@ const Header = () => {
             <Link to="/login">
               <li className="navbar__right--login">LOG IN</li>
             </Link>
-            <Link to="/register">
-              <li className="navbar__right--register">REGISTER</li>
-            </Link>
+
+            {
+              // checking if the user is set
+              props.user ? (
+                <div>
+                  <p>Welcome , {props.user.displayName} </p>
+                  <button onClick={handleLogout}>LOG OUT</button>
+                </div>
+              ) : (
+                <div>
+                  <Link to="/register">
+                    <li className="navbar__right--register">REGISTER</li>
+                  </Link>
+                  {/* <Link to="/login"> */}
+                  <li className="navbar__right--login">
+                    <a href="http://localhost:5000/auth/google/callback">
+                      LOG IN
+                    </a>
+                  </li>
+                  {/* </Link> */}
+                </div>
+              )
+            }
           </ul>
         </div>
       </nav>

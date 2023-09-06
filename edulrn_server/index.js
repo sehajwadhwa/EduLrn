@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(
   session({
-    secret: "your-secret-key",
+    secret: "empty",
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -39,7 +39,7 @@ passport.use(
       callbackURL: "http://localhost:5000/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
-      // Store user information in your database or session.
+      console.log(profile); // Store user information in your database or session.
       return done(null, profile);
     }
   )
@@ -74,6 +74,7 @@ app.get(
 app.get("/user", (req, res) => {
   // Return user information (if authenticated) or an error message.
   if (req.isAuthenticated()) {
+    console.log(req.user);
     res.json({ user: req.user });
   } else {
     res.status(401).json({ error: "Not authenticated" });

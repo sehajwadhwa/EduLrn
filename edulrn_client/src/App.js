@@ -1,5 +1,8 @@
 import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Home from "./components/Home/Home";
@@ -19,6 +22,7 @@ function App() {
     axios
       .get("http://localhost:5000/user", { withCredentials: true })
       .then((response) => {
+        console.log(response.data.user);
         setUser(response.data.user);
       })
       .catch((error) => {
