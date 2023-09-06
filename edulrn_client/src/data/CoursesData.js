@@ -9,7 +9,7 @@ const CoursesData = [
   },
   {
     course_id: "2",
-    name: "CSE",
+    name: "Economics",
     img: "../assets/COURSES1.jpg",
     amount: "$100",
     instructor_name: "Saanj",
