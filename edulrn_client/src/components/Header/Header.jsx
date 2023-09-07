@@ -33,13 +33,11 @@ const Header = (props) => {
                   <Link to="/register">
                     <li className="navbar__right--register">REGISTER</li>
                   </Link>
-                  {/* <Link to="/login"> */}
-                  <li className="navbar__right--login">
+                  {/* <li className="navbar__right--login">
                     <a href="http://localhost:5000/auth/google/callback">
                       LOG IN
                     </a>
-                  </li>
-                  {/* </Link> */}
+                  </li> */}
                 </div>
               )
             }

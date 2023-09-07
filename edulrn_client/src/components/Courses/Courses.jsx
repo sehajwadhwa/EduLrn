@@ -11,7 +11,9 @@ const Courses = () => {
   //   console.log(setSearchText);
   // }
   const coursesNewData = searchText
-    ? CoursesData.filter((obj) => obj.name.includes(searchText))
+    ? CoursesData.filter(
+        (obj) => obj.name.toLowerCase().includes(searchText.toLowerCase()) // making filter HOF case insensitive
+      )
     : CoursesData;
 
   return (
