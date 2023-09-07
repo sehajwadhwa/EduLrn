@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CoursesData from "../../data/CoursesData";
 import "./Courses.scss";
+import "../../assets/Courses/c5.jpg";
 
 const Courses = () => {
   //set state
@@ -30,10 +31,10 @@ const Courses = () => {
       {coursesNewData.map((Course) => (
         <div>
           <h3>{Course.name}</h3>
-          <img src={Course.img}></img>
+          <img src={Course.img} alt="abc"></img>
           <p>{Course.instructor_name}</p>
-          <p>Course.course_duration</p>
-          <p>Course.amount</p>
+          <p>{Course.course_duration}</p>
+          <p>{Course.amount}</p>
         </div>
       ))}
     </div>

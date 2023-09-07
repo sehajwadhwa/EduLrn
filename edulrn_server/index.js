@@ -4,7 +4,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
+const path = require("path");
 const app = express();
 
 // Middleware
@@ -14,6 +14,7 @@ const corsOptions = {
   credentials: true, // Allow credentials (cookies, headers, etc.)
 };
 
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(
@@ -95,5 +96,5 @@ app.get("/logout", (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`I am running ${PORT}`);
 });

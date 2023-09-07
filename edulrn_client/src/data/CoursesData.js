@@ -2,7 +2,7 @@ const CoursesData = [
   {
     course_id: "1",
     name: "Computer - Web Development (HTML , CSS , JS etc)",
-    img: "../assets/Banner 4.jpg",
+    img: "../../assets/Banner 4.jpg",
     amount: "$840",
     instructor_name: "JIM BENNET",
     course_duration: "45 hrs",
@@ -10,7 +10,7 @@ const CoursesData = [
   {
     course_id: "2",
     name: "Computer - Mobile App Development ",
-    img: "../assets/Courses/c5.jpg",
+    img: "/assets/Courses/c5.jpg",
     amount: "$700",
     instructor_name: "SAANJ",
     course_duration: "28 hrs",
@@ -104,7 +104,8 @@ const CoursesData = [
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
-  },{
+  },
+  {
     course_id: "5",
     name: "Blackchain and Cryptocurrency",
     img: "../assets/COURSES4.jpg",
@@ -112,7 +113,6 @@ const CoursesData = [
     instructor_name: "Saanj",
     course_duration: "2hrs",
   },
- 
 ];
 
 export default CoursesData;
