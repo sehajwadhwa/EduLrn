@@ -43,7 +43,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );

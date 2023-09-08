@@ -5,6 +5,8 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
+const coursesRoute = require("./routes/courses.js");
+
 const app = express();
 
 // Middleware
@@ -14,12 +16,12 @@ const corsOptions = {
   credentials: true, // Allow credentials (cookies, headers, etc.)
 };
 
-app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use(cors(corsOptions));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use(cookieParser());
 app.use(
   session({
-    secret: "empty",
+    secret: "your-secret-key",
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -29,6 +31,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use("/courses", coursesRoute);
 
 // Google OAuth Configuration
 passport.use(

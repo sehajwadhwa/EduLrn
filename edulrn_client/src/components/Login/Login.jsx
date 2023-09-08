@@ -34,11 +34,13 @@ const Login = () => {
             <input className="Login__button" type="submit" value="LogIn" />
             <a
               className="Login__google"
-              href="http://localhost:5000/auth/google/callback"
+              href="http://localhost:5000/auth/google"
             >
               Login via Google
             </a>
-            <a className="Login__newuser"href="/register">New User ? Click here to Register</a>
+            <a className="Login__newuser" href="/register">
+              New User ? Click here to Register
+            </a>
           </form>
         </div>
       </div>

@@ -1,12 +1,28 @@
 import "./Header.scss";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Logo2.jpg";
+import axios from "axios";
 
-const Header = (props) => {
-  function handleLogout() {
-    console.log("Log Out");
-  }
+const Header = ({ user, setUser }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Log out the user on the backend.
+    axios
+      .get("http://localhost:5000/logout", { withCredentials: true })
+      .then((data) => {
+        setUser(null);
+
+        if (data.redirect) {
+          navigate("/");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -23,9 +39,9 @@ const Header = (props) => {
 
             {
               // checking if the user is set
-              props.user ? (
+              user ? (
                 <div>
-                  <p>Welcome , {props.user.displayName} </p>
+                  <p>Welcome , {user.displayName} </p>
                   <button onClick={handleLogout}>LOG OUT</button>
                 </div>
               ) : (
@@ -33,11 +49,6 @@ const Header = (props) => {
                   <Link to="/register">
                     <li className="navbar__right--register">REGISTER</li>
                   </Link>
-                  {/* <li className="navbar__right--login">
-                    <a href="http://localhost:5000/auth/google/callback">
-                      LOG IN
-                    </a>
-                  </li> */}
                 </div>
               )
             }

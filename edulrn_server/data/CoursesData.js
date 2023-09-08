@@ -2,7 +2,7 @@ const CoursesData = [
   {
     course_id: "1",
     name: "Computer - Web Development (HTML , CSS , JS etc)",
-    img: "../../assets/Banner 4.jpg",
+    img: "/assets/BANNER4.jpg",
     amount: "$840",
     instructor_name: "JIM BENNET",
     course_duration: "45 hrs",
@@ -18,7 +18,7 @@ const CoursesData = [
   {
     course_id: "3",
     name: "Computer - Data Science",
-    img: "../assets/Courses/c2.jpg",
+    img: "/assets/Courses/c2.jpg",
     amount: "$800",
     instructor_name: "NIKO",
     course_duration: "29 hrs",
@@ -26,7 +26,7 @@ const CoursesData = [
   {
     course_id: "4",
     name: "Computer - Cybersecurity",
-    img: "../assets/Courses/c7.jpg",
+    img: "/assets/Courses/c7.jpg",
     amount: "$300",
     instructor_name: "ANKUR BAG",
     course_duration: "32 hrs",
@@ -34,7 +34,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Creative Arts & Design - Graphic Design",
-    img: "../assets/HOME 3.jpg",
+    img: "/assets/HOME 3.jpg",
     amount: "$160",
     instructor_name: "SAANJ",
     course_duration: "4 hrs",
@@ -42,7 +42,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Creative Arts & Design - Photography",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -50,7 +50,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Creative Arts & Design - Video Editing and Production",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -59,7 +59,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Languages - ESL",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -67,7 +67,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Languages - Sign Language",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -75,7 +75,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Academic - STEM",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -83,7 +83,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Academic - Mathematics",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -91,7 +91,7 @@ const CoursesData = [
   {
     course_id: "5",
     name: "Academic - Psychology",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -100,19 +100,19 @@ const CoursesData = [
   {
     course_id: "5",
     name: "SEO and Digital Marketing",
-    img: "../assets/COURSES4.jpg",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
   },
   {
     course_id: "5",
-    name: "Blackchain and Cryptocurrency",
-    img: "../assets/COURSES4.jpg",
+    name: "Blockchain and Cryptocurrency",
+    img: "/assets/COURSES4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
   },
 ];
 
-export default Coursesdata;
+module.exports = CoursesData;

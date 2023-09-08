@@ -1,10 +1,65 @@
 .Courses {
-  border: 2px solid red;
-  background-color: aqua;
-  height: 80vh;
+  background-color: #c09471;
+
   width: 100vw;
 
   &__searchbar {
-    padding: 2rem 0.5rem;
+    padding: 6rem 0.5rem 1rem 2rem;
+
+    //padding: 10rem 0.5rem 0.5rem 5rem //for desktop
+
+    &--size {
+      width: 60vw;
+      padding: 0.5rem; //mobile styling
+    }
+  }
+  &__display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+    &--style {
+      border: 1px solid black;
+      flex-basis: 350px;
+      position: relative;
+    }
+    &--style img {
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border-radius: 5px;
+      &:hover + .Courses__display--info {
+        display: block;
+        // background-color: red;
+
+        p {
+          color: purple;
+          margin-bottom: 10px;
+          background-color: #c09471;
+          border-radius: 2px;
+          transition: 5s;
+          padding: 5px 8px;
+        }
+      }
+    }
+    &--info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    &--innerinfo {
+      margin: auto;
+      width: 80%;
+      position: absolute;
+      top:30% ;
+      left: 10%;
+    }
   }
 }
