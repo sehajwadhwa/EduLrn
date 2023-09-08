@@ -6,7 +6,7 @@ const Login = () => {
     <section className="Page">
       <div className="Login">
         <div className="Login__header">LOG IN </div>
-        <div>
+        <div className="Login__table">
           <form className="Login__main">
             <label className="Login__main--heading" htmlFor="username">
               USERNAME :
@@ -31,6 +31,7 @@ const Login = () => {
                 required
               />
             </label>
+<div className="Login--style">
             <input className="Login__button" type="submit" value="LogIn" />
             <a
               className="Login__google"
@@ -38,6 +39,8 @@ const Login = () => {
             >
               Login via Google
             </a>
+            </div>
+
             <a className="Login__newuser" href="/register">
               New User ? Click here to Register
             </a>

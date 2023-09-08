@@ -1,3 +1,6 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 a {
   text-decoration: none;
   // color: maroon;
@@ -5,11 +8,11 @@ a {
   font-weight: 700;
 }
 a:hover {
-  color: #d5a04b;
+  color: $primary-background-color;
 }
 //Global scss
 .Page {
-  background-color: #3f575f;
+  background-color: $page-background-color;
   height: 100vh;
   width: 100%;
   padding: 0.3rem 0;
@@ -26,68 +29,125 @@ a:hover {
   height: 75vh;
   width: 60vw;
   margin: 6rem 7rem 4rem 4rem;
-  background-color: #db9559;
-  color: white;
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
 
+  @include tablet {
+    height: 75vh;
+    width: 50vw;
+    margin: 6rem 0rem 0rem 12rem;
+  }
+
+  @include desktop {
+    height: 60vh;
+    width: 60vw;
+    margin: 8rem 0rem 0rem 15rem;
+    border-radius: 20px;
+  }
+
   &__header {
     display: flex;
-    justify-content: center;
+
     margin: 1.8rem;
-    font-size: 1.8rem;  //mobile
+    font-size: 1.8rem; //mobile
+  }
+  &__table {
+    margin: 0rem;
   }
   &__main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: rem; //mobile
+
     font-size: 0.8rem;
+    @include desktop {
+      font-size: 1.3rem;
+    }
 
     &--heading {
       padding-left: 0.5rem;
+      @include desktop {
+        padding-left: 0;
+      }
     }
     &--fields {
       padding: 0.7rem 0rem;
+
+      @include desktop {
+        padding: 1rem 5rem;
+      }
     }
   }
 
   &__main input {
-    // padding: 0.5rem 1rem; //remove for mobile styling
     margin: 0.5rem 0.3rem;
   }
   &__google {
-    font-size: 0.8rem;
-    margin: 0.5rem;
     padding: 0.5rem;
-    color: #3f575f;
-    border: 1px dotted black;
-    border-radius: 10px;
-    background-color: whitesmoke;
+    border-radius: 20px;
+    border: none;
+    background-color: $secondary-text-color;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: $page-background-color;
+    @include desktop {
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
+    }
 
     &:hover {
-      background-color: #383647;
+      background-color: $page-background-color;
     }
   }
   &__newuser {
     font-size: 0.7rem;
+    margin-top: 0.5rem;
+    @include tablet {
+      margin-left: 3rem;
+    }
+    @include desktop {
+      font-size: 1rem;
+    }
 
     &:hover {
-      color: #3f575f;
+      color: $page-background-color;
     }
   }
   &__button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 0;
     border-radius: 20px;
     border: none;
-    background-color: #f1f1f1;
-    font-weight: 700;
+    background-color: $secondary-text-color;
+    font-weight: 800;
+
+    @include tablet {
+      margin-left: 3rem;
+      padding: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+      padding: 0.5rem 3rem;
+    }
 
     &:hover {
-      background-color: #3f575f;
-      color: #f1f1f1;
-      font-weight: 700;
+      background-color: $page-background-color;
+      color: $secondary-text-color;
+      font-weight: 800;
+    }
+  }
+  &--style {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      margin-left: 4rem;
+    }
+    @include desktop {
+      flex-direction: row;
+      margin-left: 7rem;
     }
   }
 }

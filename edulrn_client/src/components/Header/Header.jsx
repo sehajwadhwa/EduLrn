@@ -8,6 +8,7 @@ const Header = ({ user, setUser }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    
     // Log out the user on the backend.
     axios
       .get("http://localhost:5000/logout", { withCredentials: true })

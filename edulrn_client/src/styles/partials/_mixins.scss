@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+// RESPONSIVE DESIGN
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}

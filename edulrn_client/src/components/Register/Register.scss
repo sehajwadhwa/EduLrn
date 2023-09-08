@@ -1,6 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 //Global scss
 .Page {
-  background-color: #3f575f;
+  background-color: $page-background-color;
   height: 100vh;
   width: 100%;
   padding: 0.3rem 0;
@@ -11,45 +14,72 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 85vh;
   width: 60vw;
   margin: 5rem 3rem 0 4rem;
-  background-color: #db9559;
-  color: white;
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px;
 
+  @include tablet {
+    margin: 5rem 0rem 0 15rem;
+    width: 40vw;
+    height: 80vh;
+  }
+  @include desktop {
+    margin: 10rem 0rem 0 30rem;
+    width: 30vw;
+    height: 70vh;
+  }
+
   &__header {
     display: flex;
     justify-content: center;
-   
-    font-size: 1.8rem;
+
+    font-size: 1.5rem;
+
+    //importing mixins
+    @include desktop {
+      font-size: 2rem;
+    }
   }
+
   &__main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1rem;
     font-size: 0.8rem;
+
+    @include desktop {
+      font-size: 1.3rem;
+    }
   }
 
   &__fields {
-    // padding: 0.5rem 0rem;    //mobile styling
-    margin: 0.5rem 0;
+    padding: 0.5rem 0rem; //mobile styling
+    // margin: 0.5rem 0;
+    border: 1px;
+    margin: 0.3rem;
+    @include desktop {
+      margin: 0.5rem;
+    }
   }
 
   &__button {
     padding: 0.8rem 1.5rem;
     border-radius: 20px;
     border: none;
-    background-color: #f1f1f1;
+    background-color: $secondary-text-color;
     font-weight: 700;
     margin-top: 1rem;
 
     &:hover {
-      background-color: #3f575f;
-      color: #f1f1f1;
+      background-color: $page-background-color;
+      color: $secondary-text-color;
       font-weight: 700;
     }
   }
