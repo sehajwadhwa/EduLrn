@@ -6,9 +6,9 @@
     justify-content: space-between;
     flex-direction: row;
     background-color: $secondary-background-color;
-    color:$secondary-text-color;
+    color: $secondary-text-color;
     height: 15vh;
-    position: fixed;
+    position: absolute;
     width: 100%;
 
     &__logo {
@@ -34,6 +34,6 @@
 }
 a {
   text-decoration: none;
-  color:$secondary-text-color;
+  color: $secondary-text-color;
   font-weight: 700;
 }

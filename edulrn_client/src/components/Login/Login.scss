@@ -3,14 +3,13 @@
 
 a {
   text-decoration: none;
-  // color: maroon;
   font-size: 0.8rem;
   font-weight: 700;
 }
 a:hover {
   color: $primary-background-color;
 }
-//Global scss
+
 .Page {
   background-color: $page-background-color;
   height: 100vh;
@@ -42,9 +41,9 @@ a:hover {
   }
 
   @include desktop {
-    height: 60vh;
+    height: 50vh;
     width: 60vw;
-    margin: 8rem 0rem 0rem 15rem;
+    margin: 15rem 0rem 0rem 18rem;
     border-radius: 20px;
   }
 

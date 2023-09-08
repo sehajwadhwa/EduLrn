@@ -1,12 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
 .Courses {
-  background-color: #c09471;
+  background-color: $courses-color;
 
   width: 100vw;
 
   &__searchbar {
     padding: 6rem 0.5rem 1rem 2rem;
-
-    //padding: 10rem 0.5rem 0.5rem 5rem //for desktop
+    @include desktop {
+      padding: 10rem 0.5rem 1.5rem 7rem;
+    }
 
     &--size {
       width: 60vw;
@@ -32,12 +36,11 @@
       border-radius: 5px;
       &:hover + .Courses__display--info {
         display: block;
-        // background-color: red;
 
         p {
           color: purple;
           margin-bottom: 10px;
-          background-color: #c09471;
+          background-color: $courses-color;
           border-radius: 2px;
           transition: 5s;
           padding: 5px 8px;
@@ -49,16 +52,16 @@
       top: 0;
       left: 0;
       display: none;
-      
+
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: $effect-color;
     }
     &--innerinfo {
       margin: auto;
       width: 80%;
       position: absolute;
-      top:30% ;
+      top: 30%;
       left: 10%;
     }
   }

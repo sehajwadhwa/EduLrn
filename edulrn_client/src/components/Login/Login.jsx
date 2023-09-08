@@ -31,14 +31,14 @@ const Login = () => {
                 required
               />
             </label>
-<div className="Login--style">
-            <input className="Login__button" type="submit" value="LogIn" />
-            <a
-              className="Login__google"
-              href="http://localhost:5000/auth/google"
-            >
-              Login via Google
-            </a>
+            <div className="Login--style">
+              <input className="Login__button" type="submit" value="LogIn" />
+              <a
+                className="Login__google"
+                href="http://localhost:5000/auth/google"
+              >
+                Login via Google
+              </a>
             </div>
 
             <a className="Login__newuser" href="/register">
