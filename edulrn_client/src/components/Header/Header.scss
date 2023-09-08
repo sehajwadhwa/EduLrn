@@ -1,4 +1,12 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+a {
+  text-decoration: none;
+  color: $secondary-text-color;
+  font-weight: 700;
+}
+
 
 .header {
   .navbar {
@@ -21,19 +29,30 @@
     }
     &__right--login {
       padding: 1rem;
-      font-size: 0.8rem; //mobile styling
+      font-size: 0.8rem;
+
+      //MEDIA QUERIES
+
+      @include tablet {
+        font-size: 1rem;
+      }
+      @include desktop {
+        font-size: 1.3rem;
+      }
     }
     &__right--register {
       padding: 1rem;
       font-size: 0.8rem;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+      @include desktop {
+        font-size: 1.3rem;
+      }
     }
     img {
       height: 100%;
     }
   }
-}
-a {
-  text-decoration: none;
-  color: $secondary-text-color;
-  font-weight: 700;
 }
