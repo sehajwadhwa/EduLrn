@@ -1,12 +1,9 @@
 import React from "react";
 import "./StudentProfile.scss";
 
-const StudentProfile = () => {
+export default function StudentProfile() {
   return (
-    <div className="StudentProfile">
-      <div className="StudentProfile__info"></div>
-    </div>
-  );
-};
+    <div style={{ width:"30vw", height:"30vh", padding: "50px", backgroundColor: "green" }}>StudentProfile</div>
+  )
+}
 
-export default StudentProfile;

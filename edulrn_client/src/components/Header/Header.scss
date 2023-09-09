@@ -20,12 +20,15 @@ a {
 
     &__logo {
       height: 100%;
+
+      img {
+        border-radius: 50%;
+      }
     }
     &__right {
       display: flex;
       &__button {
         justify-content: center;
-
       }
     }
 

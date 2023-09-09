@@ -147,6 +147,7 @@ passport.use(
     (accessToken, refreshToken, profile, done) => {
       // console.log(profile); // Store user information in your database or session.
       profile.userType = "student";
+      const userType = profile.userType;
       const { email, family_name, given_name, name, sub, picture } =
         profile._json;
 
@@ -209,7 +210,7 @@ app.get(
 );
 
 app.get(
-  "/auth/instructor/google",
+  "/auth/instructor",
   passport.authenticate("instructor", { scope: ["profile", "email"] })
 );
 
@@ -223,7 +224,7 @@ app.get(
 );
 
 app.get(
-  "/auth/student/google",
+  "/auth/student",
   passport.authenticate("student", { scope: ["profile", "email"] })
 );
 
@@ -239,7 +240,7 @@ app.get(
 app.get("/user", (req, res) => {
   // Return user information (if authenticated) or an error message.
   if (req.isAuthenticated()) {
-    console.log(req.user);
+    // console.log("Authentication user:req.user " + req.user);
     res.json({ user: req.user });
   } else {
     res.status(401).json({ error: "Not authenticated" });

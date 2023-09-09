@@ -10,9 +10,9 @@ const Register = () => {
     password: "",
     userType: "",
   });
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  // };
   const handleChange = (e) => {
     console.log(e.target);
     const { name, value } = e.target;
@@ -88,7 +88,7 @@ const Register = () => {
             </select>
 
             <input
-              onClick={handleSubmit}
+              // onClick={handleSubmit}
               className="Register__button"
               type="submit"
               value="REGISTER"
