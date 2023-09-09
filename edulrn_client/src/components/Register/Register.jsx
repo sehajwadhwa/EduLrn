@@ -8,9 +8,11 @@ const Register = () => {
     lastName: "",
     email: "",
     password: "",
-    selectProfile: "",
+    userType: "",
   });
-
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  };
   const handleChange = (e) => {
     console.log(e.target);
     const { name, value } = e.target;
@@ -71,14 +73,14 @@ const Register = () => {
               required
             />
 
-            <label className="Register__fields" htmlFor="selectProfile">
+            <label className="Register__fields" htmlFor="userType">
               Select Profile{" "}
             </label>
             {/* add onChange to line 44 */}
             <select
               onChange={handleChange}
-              name="selectProfile"
-              value={formData.selectProfile}
+              name="userType"
+              value={formData.userType}
             >
               <option value="">Select </option>
               <option value="student">Student </option>
@@ -86,6 +88,7 @@ const Register = () => {
             </select>
 
             <input
+              onClick={handleSubmit}
               className="Register__button"
               type="submit"
               value="REGISTER"

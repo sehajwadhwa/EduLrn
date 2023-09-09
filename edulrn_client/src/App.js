@@ -44,6 +44,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/student" element={<StudentProfile />} />
+          <Route path="/instructor" element={<StudentProfile />} />
         </Routes>
         {/* <Footer /> */}
       </div>

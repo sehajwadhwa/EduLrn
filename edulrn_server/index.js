@@ -76,16 +76,112 @@ passport.use(
         .then((data) => {
           console.log("newUser: " + newUser);
           // setuserData(data.data);
+          return done(null, profile);
         })
         .catch((err) => {
           console.log("error while creating user: " + err);
         });
-
-      return done(null, profile);
     }
   )
 );
 
+passport.use(
+  "instructor",
+  new GoogleStrategy(
+    {
+      clientID:
+        "1005204749854-rolsm63fi5dm8rh1nahe1i8f89717is8.apps.googleusercontent.com",
+      clientSecret: "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",
+      callbackURL: "http://localhost:5000/auth/instructor/google/callback",
+    },
+    (accessToken, refreshToken, profile, done) => {
+      // console.log(profile); // Store user information in your database or session.
+      profile.userType = "instructor";
+      const userType = profile.userType;
+
+      const { email, family_name, given_name, name, sub, picture } =
+        profile._json;
+
+      const newUser = {
+        id: sub,
+        displayName: name,
+        familyName: family_name,
+        givenName: given_name,
+        email: email,
+        userType: userType,
+      };
+
+      //POST
+
+      console.log("posting user");
+      const url = "http://localhost:5000";
+      fetch(`${url}/users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("newUser: " + newUser);
+          // setuserData(data.data);
+          return done(null, profile);
+        })
+        .catch((err) => {
+          console.log("error while creating user: " + err);
+        });
+    }
+  )
+);
+
+passport.use(
+  "student",
+  new GoogleStrategy(
+    {
+      clientID:
+        "1005204749854-rolsm63fi5dm8rh1nahe1i8f89717is8.apps.googleusercontent.com",
+      clientSecret: "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",
+      callbackURL: "http://localhost:5000/auth/student/google/callback",
+    },
+    (accessToken, refreshToken, profile, done) => {
+      // console.log(profile); // Store user information in your database or session.
+      profile.userType = "student";
+      const { email, family_name, given_name, name, sub, picture } =
+        profile._json;
+
+      const newUser = {
+        id: sub,
+        displayName: name,
+        familyName: family_name,
+        givenName: given_name,
+        email: email,
+        userType: userType,
+      };
+
+      //POST
+
+      console.log("posting user");
+      const url = "http://localhost:5000";
+      fetch(`${url}/users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("newUser: " + newUser);
+          // setuserData(data.data);
+          return done(null, profile);
+        })
+        .catch((err) => {
+          console.log("error while creating user: " + err);
+        });
+    }
+  )
+);
 // callBack
 // OAuth: clientId, clientSecret
 
@@ -109,6 +205,34 @@ app.get(
   (req, res) => {
     // Successful authentication, redirect to the frontend app.
     res.redirect("http://localhost:3000");
+  }
+);
+
+app.get(
+  "/auth/instructor/google",
+  passport.authenticate("instructor", { scope: ["profile", "email"] })
+);
+
+app.get(
+  "/auth/instructor/google/callback",
+  passport.authenticate("instructor", { failureRedirect: "/" }),
+  (req, res) => {
+    // Successful authentication, redirect to the frontend app.
+    res.redirect("http://localhost:3000/instructor");
+  }
+);
+
+app.get(
+  "/auth/student/google",
+  passport.authenticate("student", { scope: ["profile", "email"] })
+);
+
+app.get(
+  "/auth/student/google/callback",
+  passport.authenticate("student", { failureRedirect: "/" }),
+  (req, res) => {
+    // Successful authentication, redirect to the frontend app.
+    res.redirect("http://localhost:3000/student");
   }
 );
 
