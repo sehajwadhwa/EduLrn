@@ -35,6 +35,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header user={user} setUser={setUser} />
+
         {/* Pass as Props */}
 
         {/* <Chat /> */}

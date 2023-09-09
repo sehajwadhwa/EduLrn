@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { GrNext, GrPrevious } from "react-icons/gr";
+import "./Home.scss";
+import { Link } from "react-router-dom";
+
 import banner1 from "../../assets/Banner/b1.jpg";
 import banner2 from "../../assets/Banner/b2.jpg";
 import banner3 from "../../assets/Banner/b3.jpg";
 import courses1 from "../../assets/Courses/c1.jpg";
 import courses2 from "../../assets/Courses/c2.jpg";
 import courses3 from "../../assets/Courses/c3.jpg";
-
-import "./Home.scss";
-import barba from "@barba/core";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
