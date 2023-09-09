@@ -14,7 +14,7 @@ import Footer from "./components/Footer/Footer";
 // User authentication is set true
 axios.defaults.withCredentials = true;
 
-function App() {
+const App = () => {
   //Set State
   const [user, setUser] = useState(null);
 
@@ -51,6 +51,6 @@ function App() {
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

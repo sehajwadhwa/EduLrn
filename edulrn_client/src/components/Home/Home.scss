@@ -1,3 +1,4 @@
+
 .home {
   height: 100vh;
   width: 100vw;
@@ -40,6 +41,7 @@ img {
     &--1 {
       width: 100vw;
       height: 50vh;
+      background-position: cover;
     }
     &--slide {
       height: 100vh;
