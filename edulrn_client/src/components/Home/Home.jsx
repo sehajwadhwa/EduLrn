@@ -20,12 +20,12 @@ const Home = () => {
           <div className="banner--slide">
             <img className="banner__img--1" src={banner1} alt="Banner" />
           </div>
-          <div className="banner--slide">
+          {/* <div className="banner--slide">
             <img className="banner__img--2" src={banner2} alt="Banner" />
           </div>
           <div className="banner--slide">
             <img className="banner__img--3" src={banner3} alt="Banner" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="courses">

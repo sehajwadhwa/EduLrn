@@ -1,9 +1,13 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+}
 .hero {
-  height: 90vh;
+  height: 85vh;
   width: 100%;
 }
 img {
-  height: 100%;
+  // height: 100%;
   width: 100%;
 }
 // .courses{
@@ -23,7 +27,7 @@ img {
 
 .courses {
   margin-top: 2rem;
-  background-color: #8D8473;
+  background-color: #8d8473;
   width: 100vw;
   height: 50vh;
   position: relative;
@@ -48,7 +52,6 @@ img {
     height: 50vh;
     z-index: 1;
     font-style: italic;
-    font-size: 0.8rem;            //mobile friendly
-    
+    font-size: 0.8rem; //mobile friendly
   }
 }
