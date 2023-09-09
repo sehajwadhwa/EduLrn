@@ -2,7 +2,7 @@ const CoursesData = [
   {
     course_id: "1",
     name: "Computer - Web Development (HTML , CSS , JS etc)",
-    img: "/assets/BANNER4.jpg",
+    img: "/assets/banner1.jpg",
     amount: "$840",
     instructor_name: "JIM BENNET",
     course_duration: "45 hrs",

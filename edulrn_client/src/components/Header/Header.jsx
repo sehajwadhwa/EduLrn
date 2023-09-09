@@ -8,7 +8,6 @@ const Header = ({ user, setUser }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    
     // Log out the user on the backend.
     axios
       .get("http://localhost:5000/logout", { withCredentials: true })
@@ -33,20 +32,21 @@ const Header = ({ user, setUser }) => {
           </Link>
         </div>
         <div className="navbar__right">
-          <ul className="navbar__right--links">
-            <Link to="/login">
-              <li className="navbar__right--login">LOG IN</li>
-            </Link>
-
+          <ul>
             {
               // checking if the user is set
               user ? (
                 <div>
-                  <p>Welcome , {user.displayName} </p>
-                  <button onClick={handleLogout}>LOG OUT</button>
+                  <p className="navbar__right--login">
+                    Welcome , {user.displayName}{" "}
+                  </p>
+                  <button className="navbar__right--logoutbutton" onClick={handleLogout}>LOG OUT</button>
                 </div>
               ) : (
-                <div>
+                <div className="navbar__right--links">
+                  <Link to="/login">
+                    <li className="navbar__right--login">LOG IN</li>
+                  </Link>
                   <Link to="/register">
                     <li className="navbar__right--register">REGISTER</li>
                   </Link>

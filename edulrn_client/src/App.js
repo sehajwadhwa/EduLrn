@@ -8,6 +8,7 @@ import Register from "./components/Register/Register";
 import Home from "./components/Home/Home";
 import Chat from "./components/Chat/Chat";
 import Courses from "./components/Courses/Courses";
+import StudentProfile from "./components/StudentProfile/StudentProfile";
 import Footer from "./components/Footer/Footer";
 
 // User authentication is set true
@@ -42,6 +43,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/student" element={<StudentProfile />} />
         </Routes>
         {/* <Footer /> */}
       </div>

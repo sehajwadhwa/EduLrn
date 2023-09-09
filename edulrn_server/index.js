@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 const express = require("express");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
@@ -6,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
 const coursesRoute = require("./routes/courses.js");
+const usersRoute = require("./routes/users.js");
 
 const app = express();
 
@@ -18,7 +20,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
+app.use(express.json());
 app.use(cookieParser());
+
 app.use(
   session({
     secret: "your-secret-key",
@@ -32,6 +36,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use("/courses", coursesRoute);
+app.use("/users", usersRoute);
 
 // Google OAuth Configuration
 passport.use(
@@ -43,7 +48,39 @@ passport.use(
       callbackURL: "http://localhost:5000/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
-      console.log(profile); // Store user information in your database or session.
+      // console.log(profile); // Store user information in your database or session.
+
+      const { email, family_name, given_name, name, sub, picture } =
+        profile._json;
+
+      const newUser = {
+        id: sub,
+        displayName: name,
+        familyName: family_name,
+        givenName: given_name,
+        email: email,
+      };
+
+      //POST
+
+      console.log("posting user");
+      const url = "http://localhost:5000";
+      fetch(`${url}/users`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("newUser: " + newUser);
+          // setuserData(data.data);
+        })
+        .catch((err) => {
+          console.log("error while creating user: " + err);
+        });
+
       return done(null, profile);
     }
   )

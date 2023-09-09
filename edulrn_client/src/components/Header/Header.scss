@@ -7,7 +7,6 @@ a {
   font-weight: 700;
 }
 
-
 .header {
   .navbar {
     display: flex;
@@ -21,6 +20,13 @@ a {
 
     &__logo {
       height: 100%;
+    }
+    &__right {
+      display: flex;
+      &__button {
+        justify-content: center;
+
+      }
     }
 
     &__right--links {

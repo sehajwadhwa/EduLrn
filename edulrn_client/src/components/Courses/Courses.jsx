@@ -9,6 +9,7 @@ const Courses = () => {
   const [coursesData, setCoursesData] = useState([]);
 
   useEffect(() => {
+    
     //fetch data
     const url = "http://localhost:5000";
     fetch(`${url}/courses`)

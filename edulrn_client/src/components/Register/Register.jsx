@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.scss";
 
 const Register = () => {
+  //set state
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    selectProfile: "",
+  });
+
+  const handleChange = (e) => {
+    console.log(e.target);
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData, //copies initial data
+      [name]: value,
+    });
+  };
+
   return (
     <section className="Page">
       <div className="Register">
@@ -10,52 +29,60 @@ const Register = () => {
           <form className="Register__main">
             <label htmlFor="firstName">First Name </label>
             <input
+              onChange={handleChange}
               className="Register__fields"
               type="text"
               placeholder="Type your First Name"
               name="firstName"
-              // value=""
+              value={formData.firstName}
               required
             />
 
             <label htmlFor="lastName">Last Name</label>
             <input
+              onChange={handleChange}
               className="Register__fields"
               type="text"
               placeholder="Type your Last Name"
               name="lastName"
-              // value=""
+              value={formData.lastName}
+              required
             />
 
             <label htmlFor="email">Email Address : </label>
             <input
+              onChange={handleChange}
               className="Register__fields"
               type="email"
               placeholder="Enter your email address"
               name="email"
-              // value=""
+              value={formData.email}
               required
             />
             <label htmlFor="password">Password</label>
             <input
+              onChange={handleChange}
               className="Register__fields"
               type="password"
               name="password"
               placeholder="Enter your password"
-              // value=""
+              value={formData.password}
+              minLength="8" //password requirements
               required
             />
 
-            <label className="Register__fields" htmlFor="areaOfInterest">
-              Area of Interest{" "}
+            <label className="Register__fields" htmlFor="selectProfile">
+              Select Profile{" "}
             </label>
             {/* add onChange to line 44 */}
-            <select name="area_interest" value="">
-              <option value="">Option 1 </option>
-              <option value="">Option 2</option>
-              <option value="">Option 3</option>
-              <option value="">Option 4</option>
-              <option value="">Option 5</option>
+            <select
+              onChange={handleChange}
+              name="selectProfile"
+              value={formData.selectProfile}
+            >
+              <option value="">Select </option>
+              <option value="student">Student </option>
+              <option value="instructor">Instructor</option>
             </select>
 
             <input
