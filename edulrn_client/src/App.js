@@ -69,7 +69,13 @@ const App = () => {
           />
           <Route
             path="/courses/:courseId"
-            element={<SingleCourse coursesData={coursesData} />}
+            element={
+              <SingleCourse
+                coursesData={coursesData}
+                setCoursesData={setCoursesData}
+                user={user}
+              />
+            }
           />
         </Routes>
         <Footer />
