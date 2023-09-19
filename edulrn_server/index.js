@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require("path");
 const coursesRoute = require("./routes/courses.js");
 const usersRoute = require("./routes/users.js");
-
+const authRoute = require("./routes/Auth.js");
 const app = express();
 
 // Middleware
@@ -37,6 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use("/courses", coursesRoute);
 app.use("/users", usersRoute);
+app.use("/auth",authRoute);
 
 // Google OAuth Configuration
 passport.use(

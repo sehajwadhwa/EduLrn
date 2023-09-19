@@ -32,7 +32,6 @@ export default function SingleCourse({ coursesData, setCoursesData, user }) {
         fetch(`${URL}/courses/${courseIDToDelete}`, {
           method: "DELETE",
         })
-          .then((res) => res.json())
           .then((data) => {
             console.log(data);
           })
