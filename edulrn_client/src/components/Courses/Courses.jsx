@@ -44,10 +44,12 @@ const Courses = ({ coursesData, setCoursesData, user }) => {
           onChange={(e) => setSearchText(e.target.value)}
         ></input>
         {/* Link to Add Course  */}
-
-        <Link to="/course/addCourse">
-          <p className="Courses__addcourse">Add Your Own Course</p>
-        </Link>
+        
+        {user && user.userType === "instructor" && (
+          <Link to="/course/addCourse">
+            <p className="Courses__addcourse">Add Your Own Course</p>
+          </Link>
+        )}
       </div>
 
       <div className="Courses__display">

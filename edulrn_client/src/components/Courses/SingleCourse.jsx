@@ -22,21 +22,26 @@ export default function SingleCourse({ coursesData, setCoursesData, user }) {
     setCourse(filteredCourse);
   }, []);
 
-  const askToDelete = async (courseIDToDelete) => {
-    const isConfirmed = window.confirm(
-      "Are you sure you want to delete this course?"
-    );
-    fetch(`${URL}/courses/${courseIDToDelete}`, {
-      method: "DELETE",
-    })
-      .then((res) => {
-        if (res.status === 204) {
-          console.log("Course deleted successfully.");
-        } else {
-          console.error("Failed to delete course.");
-        }
-      })
-      .catch((err) => console.error(err));
+  const askToDelete = (courseIDToDelete) => {
+    const URL = "http://localhost:5000";
+    try {
+      const isConfirmed = window.confirm(
+        "Are you sure you want to delete this course?"
+      );
+      if (isConfirmed) {
+        fetch(`${URL}/courses/${courseIDToDelete}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((err) => console.error(err));
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
     // const deletedPost = await deletePost(token, postIdToDelete)
     // console.log(deletedPost);
     // return deleted;
