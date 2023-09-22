@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -19,12 +19,14 @@ axios.defaults.withCredentials = true;
 
 const App = () => {
   //Set State
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
+  // const navigate = useNavigate();
+  const [ token, setToken ] = useState(localStorage.getItem('token') || null);
   const [coursesData, setCoursesData] = useState([]);
   useEffect(() => {
     // Fetch user information from the backend.
     axios
-      .get("http://localhost:5000/user", { withCredentials: true })
+      .get("http://localhost:5000/users", { withCredentials: true })
       .then((response) => {
         console.log(response.data.user);
         setUser(response.data.user);
@@ -34,6 +36,42 @@ const App = () => {
       });
   }, []);
 
+  const isLoggedIn = () => {
+    return !!token;
+  };
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userType');
+    setToken(null);
+    setUser({});
+    // navigate("/");
+  }
+
+  const getUserDetails = async () => {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+      return;
+    }
+    
+    console.log("Heyyy token profile")
+    fetch(`http://localhost:5000/users/me`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    })
+    .then((res) => res.json())
+    .then(data => {
+      console.log(data);
+      setUser(data);
+    })
+  }
+
+  useEffect(() => {
+    getUserDetails();
+  }, [token]) 
   return (
     <BrowserRouter>
       <div className="App">
