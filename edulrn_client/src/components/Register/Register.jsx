@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import "./Register.scss";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   //set state
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
+    confirmPassword: "",
     userType: "",
   });
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  };
+
   const handleChange = (e) => {
     console.log(e.target);
     const { name, value } = e.target;
@@ -23,6 +25,30 @@ const Register = () => {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const URL = "http://localhost:5000";
+    fetch(`${URL}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log(data.message);
+          navigate("/login");
+        } else {
+          console.error(data.error);
+        }
+      })
+      .catch((error) => {
+        console.error("Registration error:", error);
+      });
+  };
   return (
     <section className="Page">
       <div className="Register">
@@ -70,6 +96,17 @@ const Register = () => {
               placeholder="Enter your password"
               value={formData.password}
               minLength="8" //password requirements
+              required
+            />
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              onChange={handleChange}
+              className="Register__fields"
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={formData.confirmPassword}
+              // minLength="8" //password requirements
               required
             />
 

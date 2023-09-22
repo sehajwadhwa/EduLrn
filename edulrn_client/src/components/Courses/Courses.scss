@@ -17,6 +17,16 @@
       padding: 0.5rem; //mobile styling
     }
   }
+  &__addcourse {
+    padding: 0.5rem;
+width: 7vw;
+    border-radius: 20px;
+    border: none;
+    background-color: $secondary-text-color;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: $page-background-color;
+  }
   &__display {
     display: flex;
     flex-wrap: wrap;

@@ -1,7 +1,10 @@
 import React from "react";
 import "./Login.scss";
+import { useParams } from "react-router-dom";
 
 const Login = () => {
+  const { type } = useParams();
+  console.log(type);
   return (
     <section className="Page">
       <div className="Login">
@@ -33,12 +36,21 @@ const Login = () => {
             </label>
             <div className="Login--style">
               <input className="Login__button" type="submit" value="LogIn" />
-              <a
-                className="Login__google"
-                href="http://localhost:5000/auth/google"
-              >
-                Login via Google
-              </a>
+              {type === "instructor" ? (
+                <a
+                  className="Login__google"
+                  href="http://localhost:5000/auth/instructor"
+                >
+                  Login via Google
+                </a>
+              ) : (
+                <a
+                  className="Login__google"
+                  href="http://localhost:5000/auth/student"
+                >
+                  Login via Google
+                </a>
+              )}
             </div>
 
             <a className="Login__newuser" href="/register">

@@ -1,4 +1,4 @@
-const CoursesData = [
+const coursesData = [
   {
     course_id: "1",
     name: "Computer - Web Development (HTML , CSS , JS etc)",
@@ -40,7 +40,7 @@ const CoursesData = [
     course_duration: "4 hrs",
   },
   {
-    course_id: "5",
+    course_id: "6",
     name: "Creative Arts & Design - Photography",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -48,7 +48,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "7",
     name: "Creative Arts & Design - Video Editing and Production",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -57,7 +57,7 @@ const CoursesData = [
   },
 
   {
-    course_id: "5",
+    course_id: "8",
     name: "Languages - ESL",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -65,7 +65,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "9",
     name: "Languages - Sign Language",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -73,7 +73,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "10",
     name: "Academic - STEM",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -81,7 +81,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "11",
     name: "Academic - Mathematics",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -89,7 +89,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "12",
     name: "Academic - Psychology",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -98,7 +98,7 @@ const CoursesData = [
   },
 
   {
-    course_id: "5",
+    course_id: "13",
     name: "SEO and Digital Marketing",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -106,7 +106,7 @@ const CoursesData = [
     course_duration: "2hrs",
   },
   {
-    course_id: "5",
+    course_id: "14",
     name: "Blockchain and Cryptocurrency",
     img: "/assets/COURSES4.jpg",
     amount: "$100",
@@ -115,4 +115,4 @@ const CoursesData = [
   },
 ];
 
-module.exports = CoursesData;
+module.exports = coursesData;

@@ -40,11 +40,16 @@ const Header = ({ user, setUser }) => {
                   <p className="navbar__right--login">
                     Welcome , {user.displayName}{" "}
                   </p>
-                  <button className="navbar__right--logoutbutton" onClick={handleLogout}>LOG OUT</button>
+                  <button
+                    className="navbar__right--logoutbutton"
+                    onClick={handleLogout}
+                  >
+                    LOG OUT
+                  </button>
                 </div>
               ) : (
                 <div className="navbar__right--links">
-                  <Link to="/login">
+                  <Link to="/:type/login">
                     <li className="navbar__right--login">LOG IN</li>
                   </Link>
                   <Link to="/register">
