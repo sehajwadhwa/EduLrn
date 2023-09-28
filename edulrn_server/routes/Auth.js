@@ -50,7 +50,7 @@ router.post("/register", async (req, res) => {
     }
 
     // Get a reference to the "meOrganize" database and "users" collection
-    const db = client.db("companyInfo");
+    const db = client.db("Edulrn");
     const usersCollection = db.collection("users");
 
     // Check if the email already exists
@@ -112,7 +112,7 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const db = client.db("companyInfo");
+    const db = client.db("Edulrn");
     const usersCollection = db.collection("users");
 
     const user = await usersCollection.findOne({ email });

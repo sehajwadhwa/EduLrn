@@ -26,7 +26,7 @@ const client = new MongoClient(URI, options);
 client.connect();
 
 router.get('/',async (req, res) => {
-  const db = client.db('companyInfo');
+  const db = client.db('Edulrn');
   const users = await db.collection('users').find().toArray();
   res.status(201).json(users);
   // client.close();
@@ -38,7 +38,7 @@ router.get('/me', async(req, res) => {
     console.log(token);
     // Verify the token
     const decodedToken = jwt.verify(token, JWT_SECRET);
-    const db = client.db('companyInfo');
+    const db = client.db('Edulrn');
     const users = await db.collection('users').find().toArray();
     
     const userObjId = new ObjectId(decodedToken.userId);

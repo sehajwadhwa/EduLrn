@@ -1,16 +1,17 @@
 import React from "react";
 import "./Login.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Login = ({ setToken, setUser }) => {
-  const { type } = useParams();
+const Login = ({ setToken, setUser, user }) => {
+  let { type } = useParams();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
   console.log(type);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +35,7 @@ const Login = ({ setToken, setUser }) => {
 
         localStorage.setItem("token", token);
         localStorage.setItem("userType", userType);
+        type = userType;
         console.log(token);
         setToken(token);
         setUser(data);
@@ -56,7 +58,7 @@ const Login = ({ setToken, setUser }) => {
       <div className="Login">
         <div className="Login__header">LOG IN </div>
         <div className="Login__table">
-          <form className="Login__main">
+          <form onSubmit={handleSubmit} className="Login__main">
             <label className="Login__main--heading" htmlFor="email">
               Email :
               <input

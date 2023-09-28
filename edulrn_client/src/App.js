@@ -21,7 +21,7 @@ const App = () => {
   //Set State
   const [user, setUser] = useState({});
   // const navigate = useNavigate();
-  const [ token, setToken ] = useState(localStorage.getItem('token') || null);
+  const [token, setToken] = useState(localStorage.getItem("token") || null);
   const [coursesData, setCoursesData] = useState([]);
   useEffect(() => {
     // Fetch user information from the backend.
@@ -41,37 +41,37 @@ const App = () => {
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userType');
+    localStorage.removeItem("token");
+    localStorage.removeItem("userType");
     setToken(null);
     setUser({});
     // navigate("/");
-  }
+  };
 
   const getUserDetails = async () => {
-    const token = localStorage.getItem('token');
-    
+    const token = localStorage.getItem("token");
+
     if (!token) {
       return;
     }
-    
-    console.log("Heyyy token profile")
+
+    console.log("Heyyy token profile");
     fetch(`http://localhost:5000/users/me`, {
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
     })
-    .then((res) => res.json())
-    .then(data => {
-      console.log(data);
-      setUser(data);
-    })
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+      });
+  };
 
   useEffect(() => {
     getUserDetails();
-  }, [token]) 
+  }, [token]);
   return (
     <BrowserRouter>
       <div className="App">
@@ -83,7 +83,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:type/login" element={<Login />} />
-          <Route path="/login" element ={<Login />} />
+          <Route
+            path="/login"
+            element={
+              <Login user={user} setToken={setToken} setUser={setUser} />
+            }
+          />
           <Route path="/register" element={<Register />} />
           <Route
             path="/courses"
