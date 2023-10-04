@@ -1,14 +1,13 @@
 const express = require("express");
 const usersData = require("../usersData.js");
 const router = express.Router();
-const jwt = require('jsonwebtoken');
-const { MongoClient } = require('mongodb');
-const { ObjectId } = require('mongodb');
-const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../.env') });
+const jwt = require("jsonwebtoken");
+const { MongoClient } = require("mongodb");
+const { ObjectId } = require("mongodb");
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const URI = process.env.MONGO_URI;
 const { JWT_SECRET } = process.env;
-
 
 console.log("printing user data : " + usersData);
 // router.get("/", (req, res) => {
@@ -18,45 +17,45 @@ const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   writeConcern: {
-      w: 'majority'
-  }
+    w: "majority",
+  },
 };
 
 const client = new MongoClient(URI, options);
 client.connect();
 
-router.get('/',async (req, res) => {
-  const db = client.db('Edulrn');
-  const users = await db.collection('users').find().toArray();
+router.get("/", async (req, res) => {
+  const db = client.db("Edulrn");
+  const users = await db.collection("users").find().toArray();
   res.status(201).json(users);
   // client.close();
-})
+});
 
-router.get('/me', async(req, res) => {
+router.get("/me", async (req, res) => {
   // try {
-    const token = req.headers.authorization.split(' ')[1];
-    console.log(token);
-    // Verify the token
-    const decodedToken = jwt.verify(token, JWT_SECRET);
-    const db = client.db('Edulrn');
-    const users = await db.collection('users').find().toArray();
-    
-    const userObjId = new ObjectId(decodedToken.userId);
-    
-    const user = await db.collection('users').findOne({ _id: userObjId });
-    console.log("hulllloooooo");
-    console.log(user._id.getTimestamp());
-    
-    if (!user) {
-      // User not found
-      res.status(404).json({ message: 'User not found' });
-    }
-    
-    console.log(decodedToken);
-    // Return the user details
-    res.status(200).json(user);
-    console.log("stop here");
-    return;
+  const token = req.headers.authorization.split(" ")[1];
+  console.log(token);
+  // Verify the token
+  const decodedToken = jwt.verify(token, JWT_SECRET);
+  const db = client.db("Edulrn");
+  const users = await db.collection("users").find().toArray();
+
+  const userObjId = new ObjectId(decodedToken.userId);
+
+  const user = await db.collection("users").findOne({ _id: userObjId });
+  console.log("hulllloooooo");
+  console.log(user._id.getTimestamp());
+
+  if (!user) {
+    // User not found
+    res.status(404).json({ message: "User not found" });
+  }
+
+  console.log(decodedToken);
+  // Return the user details
+  res.status(200).json(user);
+  console.log("stop here");
+  return;
 
   // } catch (error) {
   //   // Token is invalid or expired

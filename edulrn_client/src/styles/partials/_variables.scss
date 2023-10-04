@@ -1,6 +1,6 @@
 //PRIMARY COLORS
 $primary-text-color: #13182c;
-$primary-background-color: #db9559;
+$primary-background-color: linear-gradient(-90deg, #c9a8ca, #a1bcff);
 $courses-color:#c09471;
 
 //SECONDARY COLORS
@@ -22,3 +22,5 @@ $button-primary-transition :background-color 0.3s ease, transform 0.3s ease;
 
 $tablet-width: 768px;
 $desktop-width: 1280px;
+
+//FONT 

@@ -1,17 +1,56 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
-.home {
-  height: 100vh;
-  width: 100vw;
+.Home {
+  height: 100%;
+  width: 100%;
+  background: $primary-background-color;
+  // background-image: url('../../assets/iphone_screen/iphone.png');
+  // background-repeat: no-repeat;
+  z-index: -1;
 }
 .hero {
-  height: 85vh;
+  height: 100vh;
   width: 100%;
 }
-img {
-  // height: 100%;
-  width: 100%;
+.banner {
+
+  display: flex;
+  justify-content: center;
+  color: $primary-text-color;
+  
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+
+    &--h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    &--h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
+
 // .courses{
 //   display: flex;
 

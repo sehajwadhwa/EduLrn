@@ -2,7 +2,6 @@ import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Home from "./components/Home/Home";
@@ -13,6 +12,7 @@ import AddCourse from "./components/Courses/AddCourse";
 import StudentProfile from "./components/StudentProfile/StudentProfile";
 import InstructorProfile from "./components/InstructorProfile/InstructorProfile";
 import Footer from "./components/Footer/Footer";
+import "./styles/partials/_global.scss";
 
 // User authentication is set true
 axios.defaults.withCredentials = true;
@@ -23,12 +23,13 @@ const App = () => {
   // const navigate = useNavigate();
   const [token, setToken] = useState(localStorage.getItem("token") || null);
   const [coursesData, setCoursesData] = useState([]);
+  console.log(token);
   useEffect(() => {
     // Fetch user information from the backend.
     axios
-      .get("http://localhost:5000/users", { withCredentials: true })
+      .get("http://localhost:8000/users", { withCredentials: true })
       .then((response) => {
-        console.log(response.data.user);
+        // console.log(response.data.user);
         setUser(response.data.user);
       })
       .catch((error) => {
@@ -56,7 +57,7 @@ const App = () => {
     }
 
     console.log("Heyyy token profile");
-    fetch(`http://localhost:5000/users/me`, {
+    fetch(`http://localhost:8000/users/me`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -72,10 +73,11 @@ const App = () => {
   useEffect(() => {
     getUserDetails();
   }, [token]);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Header user={user} setUser={setUser} />
+        {/* <Header user={user} setUser={setUser} /> */}
 
         {/* Pass as Props */}
 

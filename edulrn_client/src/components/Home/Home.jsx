@@ -4,7 +4,7 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import "./Home.scss";
 import WhoAmI from "../WhoAmI/WhoAmI";
 import { Link } from "react-router-dom";
-import banner2 from "../../assets/Banner/b2.jpg";
+import LandingImage from "../../assets/Banner/LandingPage.png";
 import courses1 from "../../assets/Courses/c1.jpg";
 import courses2 from "../../assets/Courses/c2.jpg";
 import courses3 from "../../assets/Courses/c3.jpg";
@@ -14,13 +14,15 @@ const Home = ({ images }) => {
     <section className="Home">
       <div className="hero">
         <div className="banner">
-          <h1>EduLrn</h1>
-          <img className="banner__img--1" src={banner2} alt="Banner" />
+        <div className="banner__heading">
+          <h2 className="banner__heading--h2">Welcome to </h2>
+          <h1 className="banner__heading--h1">EDU-LRN</h1></div>
+          <img className="banner__img" src={LandingImage} alt="Banner" />
         </div>
       </div>
-      <div style={{ textAlign: "center" }}>
+      {/* <div style={{ textAlign: "center" }}>
         <WhoAmI />
-      </div>
+      </div> */}
       <div className="courses">
         <div className="courses__img">
           {/* slider */}
