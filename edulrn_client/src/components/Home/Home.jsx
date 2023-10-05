@@ -29,7 +29,7 @@ const Home = ({ images }) => {
           </div>
           
         </div>
-      {/* <div style={{ textAlign: "center" }}>
+      {/* {/* <div style={{ textAlign: "center" }}>
         <WhoAmI />
       </div> */}
       <div className="courses">
@@ -67,7 +67,7 @@ const Home = ({ images }) => {
           </p>
        
         </div>
-      </div>
+      </div> 
     </section>
   );
 };

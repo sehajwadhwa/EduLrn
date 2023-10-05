@@ -52,8 +52,8 @@ const Register = () => {
   return (
     <section className="Page">
       <div className="Register">
-        <div className="Register__header">REGISTER</div>
-        <div>
+        <div className="Register__header">Sign-up</div>
+        <div className="Register__container">
           <form className="Register__main">
             <label htmlFor="firstName">First Name </label>
             <input
