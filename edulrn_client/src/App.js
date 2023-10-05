@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     // Fetch user information from the backend.
     axios
-      .get("http://localhost:8000/users", { withCredentials: true })
+      .get("http://localhost:5000/users", { withCredentials: true })
       .then((response) => {
         // console.log(response.data.user);
         setUser(response.data.user);
@@ -57,7 +57,7 @@ const App = () => {
     }
 
     console.log("Heyyy token profile");
-    fetch(`http://localhost:8000/users/me`, {
+    fetch(`http://localhost:5000/users/me`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
