@@ -14,12 +14,21 @@ const Home = ({ images }) => {
     <section className="Home">
       <div className="hero">
         <div className="banner">
-        <div className="banner__heading">
-          <h2 className="banner__heading--h2">Welcome to </h2>
-          <h1 className="banner__heading--h1">EDU-LRN</h1></div>
-          <img className="banner__img" src={LandingImage} alt="Banner" />
+          <div className="banner__heading">
+            <h2 className="banner__heading--h2">Welcome to </h2>
+            <h1 className="banner__heading--h1">EDU-LRN</h1></div>
+            <img className="banner__img" src={LandingImage} alt="Banner" />
+          </div>
+          <div className="banner__button">
+           <Link to="/Register">
+              <button className="banner__button--1">Sign Up</button>
+            </Link>
+          <Link to="/login">
+            <button className="banner__button--1">LogIn</button>
+          </Link>
+          </div>
+          
         </div>
-      </div>
       {/* <div style={{ textAlign: "center" }}>
         <WhoAmI />
       </div> */}
@@ -56,15 +65,7 @@ const Home = ({ images }) => {
             Unlock your full potential and embrace the joy of learning with
             Edulrn. Start your journey today!
           </p>
-          <Link to="/courses">
-            <button className="courses__button">View Courses</button>
-          </Link>
-          <Link to="/student/login">
-            <button className="courses__button">Are you a Student?</button>
-          </Link>
-          <Link to="/instructor/login">
-            <button className="courses__button">Are you an Instructor?</button>
-          </Link>
+       
         </div>
       </div>
     </section>
