@@ -1,11 +1,12 @@
 //PRIMARY COLORS
 $primary-text-color: #13182c;
 $primary-background-color: linear-gradient(-90deg, #c9a8ca, #a1bcff);
-$courses-color:#c09471;
+$courses-color: #c09471;
 
 //SECONDARY COLORS
 $secondary-text-color: white;
 $secondary-background-color: #394443;
+$link-color : rgba(0,150,235,0.9);
 
 //DARK COLOR
 $page-background-color: #3f575f;
@@ -15,12 +16,12 @@ $border-color: black;
 $effect-color: rgba(0, 0, 0, 0.3);
 
 //Button
-$button-primary-color:navy;
-$button-primary-transition :background-color 0.3s ease, transform 0.3s ease;
+$button-primary-color: rgb(32, 42, 68);
+$button-primary-transition: background-color 0.3s ease, transform 0.3s ease;
 
 //breakpoints
 
 $tablet-width: 768px;
 $desktop-width: 1280px;
 
-//FONT 
+//FONT
