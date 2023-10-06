@@ -32,9 +32,9 @@ const Home = ({ images }) => {
       {/* {/* <div style={{ textAlign: "center" }}>
         <WhoAmI />
       </div> */}
-      <div className="courses">
+      {/* <div className="courses">
         <div className="courses__img">
-          {/* slider */}
+          
           <div className="courses__img--slide">
             <img className="courses__img--1" src={courses1} alt="Courses" />
           </div>
@@ -67,7 +67,7 @@ const Home = ({ images }) => {
           </p>
        
         </div>
-      </div> 
+      </div>  */}
     </section>
   );
 };
