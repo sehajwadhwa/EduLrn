@@ -12,7 +12,6 @@ const Login = ({ setToken, setUser, user }) => {
   });
   console.log(type);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -56,11 +55,13 @@ const Login = ({ setToken, setUser, user }) => {
   return (
     <section className="Page">
       <div className="Login">
-        <div className="Login__header">LOG IN </div>
+        <div className="Login__header">
+          <div className="Login__header--title">Log In </div>
+        </div>
         <div className="Login__table">
           <form onSubmit={handleSubmit} className="Login__main">
-            <label className="Login__main--heading" htmlFor="email">
-              Email :
+            <label  htmlFor="email">
+             
               <input
                 className="Login__main--fields"
                 type="text"
@@ -72,8 +73,8 @@ const Login = ({ setToken, setUser, user }) => {
               />
             </label>
 
-            <label className="Login__main--heading" htmlFor="password">
-              PASSWORD :
+            <label  htmlFor="password">
+            
               <input
                 className="Login__main--fields"
                 type="password"
@@ -98,14 +99,17 @@ const Login = ({ setToken, setUser, user }) => {
                   className="Login__google"
                   href="http://localhost:5000/auth/student"
                 >
-                  Login via Google
+                  Log in with Google
                 </a>
               )}
             </div>
 
-            <a className="Login__newuser" href="/register">
-              New User ? Click here to Register
+            <p>Don't have an account yet? &nbsp;
+            <a className="Login__newuser" href="/Register">
+              Sign-up
             </a>
+            </p>
+            
           </form>
         </div>
       </div>

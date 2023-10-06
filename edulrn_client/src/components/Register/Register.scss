@@ -110,15 +110,18 @@ input[name="lastName"] {
   background-image: url("../../assets/SignUp/profile.svg");
   background-repeat: no-repeat;
   background-position: left 5% bottom 60%;
+  background-size: 8%;
 }
 input[name="email"] {
   background-image: url("../../assets/SignUp/Email.svg");
   background-repeat: no-repeat;
   background-position: left 5% bottom 60%;
+  background-size: 8%;
 }
 input[name="password"],
 input[name="confirmPassword"] {
   background-image: url("../../assets/SignUp/password.svg");
   background-repeat: no-repeat;
   background-position: left 5% bottom 60%;
+  background-size: 8%;
 }

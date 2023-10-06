@@ -25,14 +25,13 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75vh;
-  width: 60vw;
-  margin: 6rem 7rem 4rem 4rem;
+  height: 90vh;
+  width: 70vw;
+  margin: 1.5rem 0rem 0rem 2.5rem;
+
   background-color: $primary-background-color;
-  color: $secondary-text-color;
+  color: $primary-text-color;
   font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5px;
 
   @include tablet {
     height: 75vh;
@@ -49,31 +48,42 @@ a:hover {
 
   &__header {
     display: flex;
+    color: $primary-text-color;
+    padding: 0rem 5rem 0rem 0rem;
+    margin: 0;
+    background-image: url("../../assets/SignUp/Login.svg");
+    background-size: 110% 122%;
+    background-position: right 0% bottom 120%;
+    background-repeat: no-repeat;
 
-    margin: 1.8rem;
-    font-size: 1.8rem; //mobile
+    &--title {
+      font-size: 2rem; //mobile
+      padding-bottom: 7rem;
+    }
   }
   &__table {
     margin: 0rem;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.45);
   }
   &__main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1.5rem 1rem;
 
     font-size: 0.8rem;
     @include desktop {
       font-size: 1.3rem;
     }
 
-    &--heading {
-      padding-left: 0.5rem;
-      @include desktop {
-        padding-left: 0;
-      }
-    }
     &--fields {
-      padding: 0.7rem 0rem;
+      padding: 0.5rem 2.5rem; //mobile styling
+      border: 1px;
+      border-radius: 15px;
+      margin: 0.3rem;
+      font-size: 0.8rem;
 
       @include desktop {
         padding: 1rem 5rem;
@@ -85,57 +95,63 @@ a:hover {
     margin: 0.5rem 0.3rem;
   }
   &__google {
-    padding: 0.5rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: $primary-text-color;
+    padding: 0.3rem 3rem;
+    border: 0.5px solid black;
     border-radius: 20px;
-    border: none;
-    background-color: $secondary-text-color;
-    font-weight: 800;
-    font-size: 0.7rem;
-    color: $page-background-color;
+    cursor: pointer;
+    transition: $button-primary-transition;
+    outline: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    background-image: url("../../assets/SignUp/Google.png");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: left 5% bottom 60%;
+
+    &:hover {
+      background-color: $button-primary-color;
+      color: $secondary-text-color;
+      transform: translateY(-3px);
+    }
+
     @include desktop {
       padding: 0.9rem 1rem;
       font-size: 1rem;
     }
-
-    &:hover {
-      background-color: $page-background-color;
-    }
   }
   &__newuser {
-    font-size: 0.7rem;
-    margin-top: 0.5rem;
     @include tablet {
       margin-left: 3rem;
     }
     @include desktop {
       font-size: 1rem;
     }
-
-    &:hover {
-      color: $page-background-color;
-    }
   }
   &__button {
-    padding: 0.5rem 0;
+    margin: 1rem;
+    background-color: $button-primary-color;
+    color: $primary-text-color;
+    color: $secondary-text-color;
+    padding: 0.3rem 3rem;
+    border: 0.5px solid black;
     border-radius: 20px;
-    border: none;
-    background-color: $secondary-text-color;
-    font-weight: 800;
+    cursor: pointer;
+    transition: $button-primary-transition;
+    outline: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 
-    @include tablet {
-      margin-left: 3rem;
-      padding: 1rem;
+    &:hover {
+      background-color: $button-primary-color;
+      color: $secondary-text-color;
+      transform: translateY(-3px);
     }
 
     @include desktop {
       font-size: 1rem;
       padding: 0.5rem 3rem;
-    }
-
-    &:hover {
-      background-color: $page-background-color;
-      color: $secondary-text-color;
-      font-weight: 800;
     }
   }
   &--style {
