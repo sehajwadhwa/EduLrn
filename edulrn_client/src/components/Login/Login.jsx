@@ -39,12 +39,12 @@ const Login = ({ setToken, setUser, user }) => {
         setToken(token);
         setUser(data);
 
-        // if(userType === 'Admin'){
-        //     navigate("/dashboard");
-        // } else {
-        //     navigate("/client");
-        // }
-        navigate("/");
+        if(userType === 'instructor'){
+            navigate("/instructor");
+        } else {
+            navigate("/student");
+        }
+        // navigate("/");
       })
       .catch((error) => {
         console.error("Error logging in:", error);

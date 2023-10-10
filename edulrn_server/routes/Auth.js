@@ -126,7 +126,7 @@ router.post("/login", async (req, res) => {
       email: user.email,
     };
 
-    const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: "48h" });
+    const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: "1w" });
     user.token = token;
     console.log(user);
     res.json(user);
