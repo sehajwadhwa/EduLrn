@@ -1,16 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./InstructorProfile.scss";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 export default function InstructorProfile() {
   return (
     <section className="Instructor">
       <div className="Instructor__header">
-        <ul className="Instructor__header--menu">
-          <li>All Courses</li>
-          <li>Account Settings</li>
-          <li>Sign Out</li>
-        </ul>
-      </div>
+        <HamburgerMenu 
+        menuItems={[
+          {title :'All Courses', link: '/courses'},
+          {title :'Account Settings' , link :'/'},
+          {title :'Add New Course', link :'/course/addCourse'},
+          {title : 'Sign Out', link :'/'},
+
+        ]} />
+
+        </div>
       <div className="Instructor__banner">
         Discover More
       </div>
