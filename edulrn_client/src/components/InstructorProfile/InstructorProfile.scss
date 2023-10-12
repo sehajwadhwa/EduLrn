@@ -1,47 +1,9 @@
-.hamburger-menu {
-    display: none;
-  }
-  
-  .hamburger-menu.open .menu-items {
-    display: block;
-  }
-  
-  .menu-icon {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem 0 0.5rem;
-  }
-  
-  .bar {
-    width: 30px;
-    height: 4px;
-    background-color: #333;
-    margin: 4px 0;
-  }
-  
-  .menu-items {
-    display: none;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu-items li {
-    margin: 10px 0;
-  }
-  
-  .menu-items a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  /* Media query for small screens (e.g., mobile) */
-  @media (max-width: 768px) {
-    .hamburger-menu {
-      display: block;
-    }
-  
-    .menu-items {
-      display: none;
-    }
-  }
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Instructor{
+    background: $primary-background-color;
+    height: 100vh;
+    width: 100%;
+    padding: 0.3rem 0;
+}
