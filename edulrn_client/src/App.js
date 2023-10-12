@@ -103,7 +103,12 @@ const App = () => {
             }
           />
           <Route path="/student" element={<StudentProfile />} />
-          <Route path="/instructor" element={<InstructorProfile />} />
+          <Route
+            path="/instructor"
+            element={
+              <InstructorProfile coursesData={coursesData} user={user} />
+            }
+          />
           <Route
             path="/course/addCourse"
             element={

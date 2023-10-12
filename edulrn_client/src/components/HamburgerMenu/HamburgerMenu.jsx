@@ -1,33 +1,32 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import "./HamburgerMenu.scss";
+import { Link } from "react-router-dom";
 
+const HamburgerMenu = ({ menuItems }) => {
+  {
+    const [menuOpen, setMenuOpen] = useState(false);
 
-const HamburgerMenu = () => {
-    {
-        const [menuOpen, setMenuOpen] = useState(false);
-     
-       const toggleMenu = () => {
-         setMenuOpen(!menuOpen);
-       };
-     
-       return (          
-         <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`}>
-           <div className="menu-icon" onClick={toggleMenu}>
-             <div className="bar"></div>
-             <div className="bar"></div>
-             <div className="bar"></div>
-           </div>
-           <ul className="menu-items">
-             <li><a href="/">Home</a></li>
-             <li><a href="/about">About</a></li>
-             <li><a href="/services">Services</a></li>
-             <li><a href="/contact">Contact</a></li>
-           </ul>
-         </div>
-     
-     
-       );
-     }}
+    const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+    };
 
+    return (
+      <div className={`hamburger-menu ${menuOpen ? "open" : ""}`}>
+        <div className="menu-icon" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <ul className="menu-items">
+          {menuItems.map((obj) => (
+            <li>
+              <Link to={obj.link}>{obj.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+};
 
-export default HamburgerMenu; 
+export default HamburgerMenu;
