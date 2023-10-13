@@ -6,8 +6,8 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 export default function StudentProfile(user,setUser ) {
   return (
 
-    <section className="Instructor">
-      <div className="Instructor__header">
+    <section className="Student">
+      <div className="Student__header">
         
         <HamburgerMenu 
 
@@ -15,35 +15,30 @@ export default function StudentProfile(user,setUser ) {
 
           {title :'All Courses', link: '/courses'},
           {title :'Account Settings' , link :'/'},
-          {title :'Contact Instructor', link :'/course/addCourse'},
+          {title :'Contact Student', link :'/course/addCourse'},
           {title :'My Certificates' , link :'/'},
           {title : 'Sign Out', link :'/'},
 
         ]} />
 
-        <div className="user">
-             <p className="user__name">Hi , {user.displayName}{" "}</p>
-             <div className="user__avatar">
+        <div className="Studentuser">
+             <p className="Studentuser__name">Hi , {user.displayName}{" "}</p>
+             <div className="Studentuser__avatar">
              </div>
          </div>
       </div>
-        <div className="Instructor__banner">
-         <p className="Instructor__banner--text"> Discover <br /> More !! </p>
+        <div className="Student__banner">
+         <p className="Student__banner--text"> New Courses  <br /> recommended <br /> just for YOU !!  </p>
        </div>
 
-      <div className="Instructor__addcourse">
-         <Link to="/course/addCourse">
-            <p className="Instructor__addcourse--text">Add Your Own Course</p>
-          </Link>
-      </div>
       
-    <div className="Instructor__courses">
+    <div className="Student__courses">
     <Link to="/courses">
-        <p className="Instructor__courses--text">My Courses</p>
+        <p className="Student__courses--text">Enrolled</p>
       </Link>
       
       <Link to="/courses">
-        <p className="Instructor__courses--text">All Courses</p>
+        <p className="Student__courses--text">Explore</p>
       </Link>
     </div>
     

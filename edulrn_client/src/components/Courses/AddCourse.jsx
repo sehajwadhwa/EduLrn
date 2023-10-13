@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AddCourse.scss";
 
 export default function AddCourse({ coursesData, setCoursesData }) {
   const navigate = useNavigate();
@@ -41,14 +42,16 @@ export default function AddCourse({ coursesData, setCoursesData }) {
   };
 
   return (
-    <div style={{ backgroundColor: "darkgreen", padding: "300px" }}>
+    <section className="page">
+    <div className="addCourse" >
+      
       <form
-        style={{ display: "flex", flexDirection: "column" }}
-        className="add-form"
+        className="addCourse__form"
         onSubmit={(e) => handleSubmit(e)}
       >
         <input
           type="text"
+          className="addCourse__form--fields"
           name="course_id"
           value={courseData.course_id}
           placeholder="ID*"
@@ -59,6 +62,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
         />
         <input
           type="text"
+          className="addCourse__form--fields"
           name="name"
           value={courseData.name}
           placeholder="Course Name*"
@@ -69,6 +73,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
         />
         <input
           type="text"
+          className="addCourse__form--fields"
           name="img"
           value={courseData.img}
           placeholder="Image Url*"
@@ -79,6 +84,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
         />
         <input
           type="text"
+          className="addCourse__form--fields"
           name="amount"
           value={courseData.amount}
           placeholder="Amount"
@@ -89,6 +95,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
         />
         <input
           type="text"
+          className="addCourse__form--fields"
           name="instructor_name"
           value={courseData.instructor_name}
           placeholder="Instructor's Name"
@@ -99,6 +106,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
         />
         <input
           type="text"
+          className="addCourse__form--fields"
           name="course_duration"
           value={courseData.course_duration}
           placeholder="Course Duration*"
@@ -108,8 +116,9 @@ export default function AddCourse({ coursesData, setCoursesData }) {
           required
         />
 
-        <button type="submit">Add Your Course</button>
+        <button className="button" type="submit">Add Your Course</button>
       </form>
     </div>
+    </section>
   );
 }
