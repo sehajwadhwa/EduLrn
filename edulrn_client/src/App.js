@@ -102,7 +102,7 @@ const App = () => {
               />
             }
           />
-          <Route path="/student" element={<StudentProfile />} />
+          <Route path="/student" element={<StudentProfile coursesData={coursesData} user={user} setUser={setUser} />} />
           <Route
             path="/instructor"
             element={

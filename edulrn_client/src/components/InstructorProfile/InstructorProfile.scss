@@ -50,8 +50,7 @@
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     
     &:hover {
-      background-color: $button-primary-color;
-      color: $secondary-text-color;
+      
       box-shadow:rgba(231, 238, 241, 0.932) 0 0 90px 33px;
       transform: translateY(-3px);
     }
@@ -64,8 +63,32 @@
     }
         
     &__courses{
-        border: 1px solid black;
+        
+        height: 49vh;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        background-color:$box-color;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-around;
+
+        &--text{
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $primary-text-color;
+
+            &:hover{
+             
+                background-color: $box-color;
+                box-shadow:rgba(231, 238, 241, 0.932) 0 0 90px 33px
+
+            }
+        }
     }
+
 }
 
 .user{

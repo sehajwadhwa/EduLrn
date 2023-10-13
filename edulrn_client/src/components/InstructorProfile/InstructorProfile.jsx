@@ -36,11 +36,17 @@ export default function InstructorProfile(user,setUser ) {
             <p className="Instructor__addcourse--text">Add Your Own Course</p>
           </Link>
       </div>
+      
     <div className="Instructor__courses">
+    <Link to="/courses">
+        <p className="Instructor__courses--text">My Courses</p>
+      </Link>
+      
       <Link to="/courses">
-        <p>View all courses</p>
+        <p className="Instructor__courses--text">All Courses</p>
       </Link>
     </div>
+    
     </section>
   );
 }

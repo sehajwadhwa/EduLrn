@@ -5,9 +5,7 @@ import "./Home.scss";
 import WhoAmI from "../WhoAmI/WhoAmI";
 import { Link } from "react-router-dom";
 import LandingImage from "../../assets/Banner/LandingPage.png";
-import courses1 from "../../assets/Courses/c1.jpg";
-import courses2 from "../../assets/Courses/c2.jpg";
-import courses3 from "../../assets/Courses/c3.jpg";
+
 
 const Home = ({ images }) => {
   return (
