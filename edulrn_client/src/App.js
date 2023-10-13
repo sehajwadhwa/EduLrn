@@ -106,7 +106,7 @@ const App = () => {
           <Route
             path="/instructor"
             element={
-              <InstructorProfile coursesData={coursesData} user={user} />
+              <InstructorProfile coursesData={coursesData} user={user} setUser={setUser}/>
             }
           />
           <Route

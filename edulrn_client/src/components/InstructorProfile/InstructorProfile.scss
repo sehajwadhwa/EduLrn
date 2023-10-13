@@ -1,9 +1,94 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .Instructor{
     background: $primary-background-color;
     height: 100vh;
     width: 100%;
     padding: 0.3rem 0;
+   
+    &__header{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__banner{
+        height: 15vh;
+        width: 80vw;
+        position: absolute;
+        top: 17%;
+        left: 8%;
+        border-radius: 25px;
+        background-color: $box-color;
+        box-shadow: 10px 10px 35px $effect-color;
+        background-image: url("../../assets/Banner/Discover.svg");
+        background-size: 120% 120%;
+        background-position: right 200% bottom 50%;
+        background-repeat: no-repeat;
+    
+      &--text{
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        top: 15%;
+        left: 17%;
+        }
+    }
+
+    &__addcourse{
+        position: absolute;
+        top: 38%;
+        left: 15%;
+        background-color:$box-color;
+        padding: 0.8rem 2.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: $button-primary-transition;
+        outline: none;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      background-color: $button-primary-color;
+      color: $secondary-text-color;
+      box-shadow:rgba(231, 238, 241, 0.932) 0 0 90px 33px;
+      transform: translateY(-3px);
+    }
+    &--text{
+        text-decoration: none;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+    }
+    }
+        
+    &__courses{
+        border: 1px solid black;
+    }
 }
+
+.user{
+    font-size: 1.5rem;
+    display: flex;
+    margin-top: 1rem;
+   
+   
+&__name{
+   
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+    &__avatar{
+        height: 6vh;
+        width: 10vw;
+        margin: 0 1rem;
+    background-image: url("../../assets/avatar/avatar-2.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px;
+    
+    }
+}
+
