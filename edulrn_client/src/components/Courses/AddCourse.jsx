@@ -43,23 +43,28 @@ export default function AddCourse({ coursesData, setCoursesData }) {
 
   return (
     <section className="page">
+      <h1 className="heading">Add Course</h1>
     <div className="addCourse" >
       
       <form
         className="addCourse__form"
         onSubmit={(e) => handleSubmit(e)}
       >
+     
         <input
           type="text"
+          
           className="addCourse__form--fields"
           name="course_id"
           value={courseData.course_id}
-          placeholder="ID*"
+          placeholder="Course ID*"
           onChange={(e) => {
             handleChange(e);
           }}
           required
         />
+     
+     
         <input
           type="text"
           className="addCourse__form--fields"
@@ -71,6 +76,7 @@ export default function AddCourse({ coursesData, setCoursesData }) {
           }}
           required
         />
+     
         <input
           type="text"
           className="addCourse__form--fields"

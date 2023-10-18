@@ -42,7 +42,7 @@ const coursesData = [
   {
     course_id: "6",
     name: "Creative Arts & Design - Photography",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/BANNER4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -50,7 +50,7 @@ const coursesData = [
   {
     course_id: "7",
     name: "Creative Arts & Design - Video Editing and Production",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/Courses/c6.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -59,7 +59,7 @@ const coursesData = [
   {
     course_id: "8",
     name: "Languages - ESL",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/Courses/c1.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -67,7 +67,7 @@ const coursesData = [
   {
     course_id: "9",
     name: "Languages - Sign Language",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/Courses/c7.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -75,7 +75,7 @@ const coursesData = [
   {
     course_id: "10",
     name: "Academic - STEM",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/Courses/c2.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -83,7 +83,7 @@ const coursesData = [
   {
     course_id: "11",
     name: "Academic - Mathematics",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/BANNER4.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -91,7 +91,7 @@ const coursesData = [
   {
     course_id: "12",
     name: "Academic - Psychology",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/Courses/c8.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -100,7 +100,7 @@ const coursesData = [
   {
     course_id: "13",
     name: "SEO and Digital Marketing",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/banner1.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",
@@ -108,7 +108,7 @@ const coursesData = [
   {
     course_id: "14",
     name: "Blockchain and Cryptocurrency",
-    img: "/assets/COURSES4.jpg",
+    img: "/assets/HOME 3.jpg",
     amount: "$100",
     instructor_name: "Saanj",
     course_duration: "2hrs",

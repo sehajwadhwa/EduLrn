@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import CoursesData from "../../data/CoursesData";
+
 import "./Courses.scss";
-// import "../../assets/Courses/c5.jpg";
+
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
@@ -23,11 +23,7 @@ const Courses = ({ coursesData, setCoursesData, user }) => {
       });
   }, []);
 
-  // const coursesNewData = searchText
-  //   ? coursesData.filter(
-  //       (obj) => obj.name.toLowerCase().includes(searchText.toLowerCase()) // making filter HOF case insensitive
-  //     )
-  //   : coursesData;
+ 
 
   useEffect(() => {
     const filteredData = coursesData.filter(
@@ -63,7 +59,9 @@ const Courses = ({ coursesData, setCoursesData, user }) => {
               <img src={`http://localhost:5000${Course.img}`} alt="abc"></img>
               <div class="Courses__display--right">
                 <h3>{Course.name}</h3>
-                <p>{Course.course_duration}</p>
+             
+                <button className="button">Enroll</button>
+              
               </div>
               {/* <div className="Courses__display--info">
                 <div className="Courses__display--innerinfo">
@@ -72,7 +70,8 @@ const Courses = ({ coursesData, setCoursesData, user }) => {
                   <p>{Course.course_duration}</p>
                   <p>{Course.amount}</p>
                 </div>
-              </div> */}
+                 */}
+              {/* </div> */}
               {userType === "instructor" &&
                 Course.instructor_name === user.displayName && (
                   <Link to={`/courses/${Course.course_id}`}>View Course</Link>

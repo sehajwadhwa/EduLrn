@@ -5,25 +5,28 @@
   .Courses {
     background: $primary-background-color;
     width: auto;
-    height: 300vh;
+    height: 380vh;
     padding: 10px;
     position: relative;
 
     &__searchbar--icon {
       position: absolute;
-      top: 1.1%;
-      left: 5%;
+      top: 1.7%;
+      left: 15%;
       color: #4a5759;
     }
 
     &__searchbar--size {
       font-family: "Inter", sans-serif;
       font-size: 15px;
-      width: 91%;
+      width: 80%;
       border: 1px solid grey;
-      padding: 10px 0 10px 32px;
+      padding: 10px 0 10px 30px;
+      border-radius: 5px;
       border: 5px;
-      margin-bottom: 20px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
     }
 
     &__display {
@@ -31,18 +34,19 @@
       font-size: 10px;
       display: flex;
       flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: center;
+
       gap: 5px;
-      height: 260vh;
-      border: 1px solid grey;
+      height: 350vh;
+      &--info {
+        display: flex;
+        flex-direction: column;
+      }
 
       &--style {
         padding: 20px;
         display: flex;
         gap: 15px;
-
-        border-bottom: 1px solid black;
+        border-bottom: 0.1px solid $effect-color;
         flex-basis: 350px;
         position: relative;
         // height: 0vh;
@@ -57,6 +61,8 @@
     }
   }
 }
+
+
 
 // .Courses {
 //   background: $primary-background-color;
